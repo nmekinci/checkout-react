@@ -33,8 +33,7 @@ const Products = ({ data, setMainData }) => {
               <Card.Body>
                 <Card.Title>{item.name}</Card.Title>
                 <Card.Text>
-                  {" "}
-                  {(+item.price * +item.dampingRate).toFixed(2)} {item.price}
+                  {(+item.price * +item.dampingRate).toFixed(2)} <span className="text-decoration-line-through">{item.price}</span>
                 </Card.Text>
 
                 <div className="d-flex border p-2 justify-content-around align-items-baseline">
