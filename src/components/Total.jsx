@@ -1,16 +1,12 @@
 import Table from "react-bootstrap/Table";
 
-const Total = ({data}) => {
+const Total = ({ data }) => {
+  const total = data
+    .map((item) => +item.price * +item.dampingRate * +item.amount)
+    .reduce((tot, num) => +tot + +num, 0);
 
-  // console.log((total * 0.18).toFixed(2));
-  // console.log(data.map( (item) => (+item.price * +item.dampingRate) * +item.amount).reduce((tot, num) => +tot + +num, 0));
-  const total = data.map( (item) => (+item.price * +item.dampingRate) * +item.amount).reduce((tot, num) => +tot + +num, 0)
-    // item.amount item.dampingRate item.price
-    // .reduce((total, num) => +total + +num, 0)
-  
   return (
     <div className="container">
-      {/* <Table striped bordered hover> */}
       <Table hover className="border-bottom my-5">
         <tbody>
           <tr>
@@ -27,7 +23,7 @@ const Total = ({data}) => {
           </tr>
           <tr>
             <td>Total</td>
-            <td>${total ? (total + (total * 0.18) + 25).toFixed(2) : 0}</td>
+            <td>${total ? (total + total * 0.18 + 25).toFixed(2) : 0}</td>
           </tr>
         </tbody>
       </Table>
