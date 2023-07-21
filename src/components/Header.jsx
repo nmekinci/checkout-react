@@ -10,7 +10,7 @@ const Header = ({ setMainData, mainData }) => {
   return (
     <>
       <h1 className="text-warning my-3">Checkout Page</h1>
-      <Button variant="primary" onClick={handleClick}>
+      <Button className="m-3" variant="primary" onClick={handleClick}>
         {hideShow ? "Hide" : "Show"}
       </Button>
       <AddProduct
