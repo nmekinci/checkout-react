@@ -23,7 +23,7 @@ const Products = ({ data, setMainData }) => {
     <>
       <Row xs={1} md={2} lg={3} xl={4} className="g-4">
         {data.map((item) => (
-          <Col key={item.id}>
+          <Col key={item.id} className="m-auto">
             <Card style={{ width: "18rem" }} className=" mt-4 m-auto">
               <Card.Img
                 variant="top"
