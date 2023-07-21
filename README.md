@@ -1,4 +1,5 @@
  https://nmekinci.github.io/checkout-react/
+ 
  I created this single page application with react. It sources for a starter data.js file but I used for storage localstorage area and when you need add a new item the AddProduct.jsx compenet will add your new item to localStorage area as a JSON file format without lost initial data.js. Also i used when adding a new item to savedList for id keys value UUID. This simple app has simple Row Col responsive structure. 
 
 
