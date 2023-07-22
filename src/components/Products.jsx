@@ -22,9 +22,10 @@ const Products = ({ data, setMainData }) => {
   return (
     <>
       <Row xs={1} md={2} lg={3} xl={4} className="g-4">
-        {data.map((item) => (
+        { data.length === 0 ? <Col className="text-danger shadow p-3 mb-5 bg-white rounded "> There is no products !! </Col> : 
+        data.map((item) => (
           <Col key={item.id} className="m-auto">
-            <Card style={{ width: "18rem" }} className=" mt-4 m-auto">
+            <Card style={{ width: "18rem" }} className=" mt-4 m-auto shadow p-3 mb-5 bg-white rounded">
               <Card.Img
                 variant="top"
                 src={item.image}
